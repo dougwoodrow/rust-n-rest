@@ -24,7 +24,6 @@ fn create_person(person: Json<Person>) -> Json<serde_json::Value> {
     let response = json!({
         "message": format!("Hello, {} year old named {}!", person.age, person.name),
         "is_adult": person.age >= 18,
-         // get current timestamp here
         "timestamp": Utc::now().to_rfc3339(),
     });
 
